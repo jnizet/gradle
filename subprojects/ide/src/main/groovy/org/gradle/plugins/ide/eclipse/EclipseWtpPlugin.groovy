@@ -178,7 +178,7 @@ class EclipseWtpPlugin extends IdePlugin {
                 if (WarPlugin.isAssignableFrom(type)) {
                     facet.conventionMapping.facets = {
                         [new Facet(FacetType.fixed, "jst.java", null), new Facet(FacetType.fixed, "jst.web", null),
-                                new Facet(FacetType.installed, "jst.web", "2.4"), new Facet(FacetType.installed, "jst.java", toJavaFacetVersion(project.sourceCompatibility))]
+                                new Facet(FacetType.installed, "jst.web", eclipseWtpModel.facet.webVersion), new Facet(FacetType.installed, "jst.java", toJavaFacetVersion(project.sourceCompatibility))]
                     }
                 } else if (EarPlugin.isAssignableFrom(type)) {
                     facet.conventionMapping.facets = { [new Facet(FacetType.fixed, "jst.ear", null), new Facet(FacetType.installed, "jst.ear", "5.0")] }

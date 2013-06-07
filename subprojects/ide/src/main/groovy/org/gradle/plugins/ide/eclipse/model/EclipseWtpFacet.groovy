@@ -32,6 +32,8 @@ import org.gradle.util.ConfigureUtil
  * eclipse {
  *   wtp {
  *     facet {
+ *       webVersion = '3.0'
+ *
  *       //you can add some extra wtp facets; mandatory keys: 'name', 'version':
  *       facet name: 'someCoolFacet', version: '1.3'
  *
@@ -66,6 +68,11 @@ import org.gradle.util.ConfigureUtil
  * @author: Szczepan Faber, created at: 4/20/11
  */
 class EclipseWtpFacet {
+
+    /**
+     * The version of the web facet (2.4 by default)
+     */
+    String webVersion = '2.4'
 
     /**
      * The facets to be added as elements.
